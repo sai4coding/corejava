@@ -1,0 +1,43 @@
+import java.io.*;
+class Main
+{
+	String name;
+	void acceptInput() throws IOException
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		name=br.readLine();
+		throw new IOException("exception from acceptInput() method handled");
+	}
+	void sendData() throws IOException
+	{
+		FileWriter f=new FileWriter("hello.txt");
+		f.write(name);
+		throw new IOException("exception from sendData method handled");
+	}
+	public static void main(String[] args)
+	{
+		Main m=new Main();
+	try
+        {
+		
+		m.acceptInput();
+	}
+	catch(IOException e)
+	{
+		System.out.println(e);
+	}
+	try
+	{
+		m.sendData();
+
+	}
+	catch(IOException e)
+	{
+		System.out.println(e);
+	}
+
+        }
+
+
+
+}

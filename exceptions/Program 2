@@ -1,0 +1,17 @@
+
+import java.util.Scanner;
+class Testclass
+{
+	public static void main()
+	{
+		System.out.println("hello");
+	}
+
+
+}
+
+/*
+Error: Main method not found in class Testclass, please define the main method as:
+   public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application
+*/

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+class Main
+{
+	public static void main(String[] args) throws IOException
+	{
+		try(Scanner sc=new Scanner(System.in);
+		FileWriter f=new FileWriter("hello.txt"))
+		{
+			int a=sc.nextInt();
+			f.write(a);
+		}
+		finally
+		{
+			System.out.println("execution completed");
+		}
+
+	}
+
+
+}

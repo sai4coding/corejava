@@ -1,0 +1,14 @@
+import java.util.scanner;
+class main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        a=sc.nextInt();
+    }
+}
+
+/*
+compile time errors : these errors are the syntatical errors in the program , java compiler cannot compile program until syntax is correct
+eg : missing semicolon , spelling mistakes in keywords , importing unknown classes 
+*/

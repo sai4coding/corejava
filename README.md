@@ -4,3 +4,13 @@ IOException : it is a checked exception occurs because of failure in input / out
 eg: when filewriter intracts with file system in out computer file operations depend on:
 
 Disk state,Folder permissions,File locks,OS constraints so java warns with IOException which is handled with try - catch or throws(because it is a checked exception) check program 3 
+
+Try with resources : 
+To ensure that resources (like files, streams, scanners, sockets, DB connections) are automatically closed after use — even if an exception occurs.
+
+This prevents:
+Resource leaks,File locks,Memory leaks,OS descriptor exhaustion
+Syntax : try (Resource1; Resource2; Resource3) {
+    // use resources
+}
+

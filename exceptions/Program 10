@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Test
+{
+	public static void main(String[] args) throws AgeLimitException
+	{
+		try
+		{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter age");
+		int age=sc.nextInt();
+		if(age<18)
+		{
+			throw new AgeLimitException("you are child");
+		}
+		else
+		{
+			System.out.println("Eligible to enter ");
+		}
+		}
+		catch(AgeLimitException a)
+		{
+			System.out.println(a.getMessage());
+		}
+	}
+
+
+}
+
+class AgeLimitException extends Exception
+{
+	AgeLimitException(String s)
+	{
+		super(s);
+	}
+
+}

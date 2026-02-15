@@ -1,0 +1,21 @@
+class Main implements Runnable
+{
+	public void run()
+	{
+		System.out.println("In run method ");
+		System.out.println("Thread details: "+Thread.currentThread()+" Thread state: "+Thread.currentThread().getState());
+
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("In main Method");
+		Main m=new Main();
+		System.out.println("Creating Thread object");
+		Thread t=new Thread(m);
+		System.out.println("Calling start() method");
+		t.start();
+	}
+
+
+
+}

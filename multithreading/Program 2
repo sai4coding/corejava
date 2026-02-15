@@ -1,0 +1,23 @@
+class Main extends Thread
+{
+	public void run()
+	{
+
+		System.out.println("Inside run method");
+		System.out.println("current thread: "+Thread.currentThread());
+		System.out.println("current thread name: "+Thread.currentThread().getName());
+		System.out.println("current thread State: "+Thread.currentThread().getState());
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("In main Method");
+		Main t=new Main();
+		System.out.println("Starting new thread");
+		t.start();
+		System.out.println("New Thread started");
+		System.out.println("Execution completed");
+	}
+
+
+
+}

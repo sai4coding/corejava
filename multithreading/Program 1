@@ -1,0 +1,13 @@
+class Main
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Execution started"); 
+		Thread t=Thread.currentThread();
+		System.out.println("current thread: "+t);
+		System.out.println("current thread name: "+t.getName());
+		System.out.println("status : "+t.getState());
+		System.out.println("Execution completed");
+	}
+
+}

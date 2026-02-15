@@ -14,3 +14,5 @@ Syntax : try (Resource1; Resource2; Resource3) {
     // use resources
 }
 
+                                                                                  Multi  Threading
+Thread :  A Thread is a lightweight component that represents seperate flow of execution of group of statments , Thread allows java program executes multiple tasks in parallel

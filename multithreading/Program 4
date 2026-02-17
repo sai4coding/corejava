@@ -1,0 +1,51 @@
+class Main extends Thread
+{
+    public void run()
+    {
+        
+		for(int i=1;i<=10;i++)
+		{
+			System.out.print(i+" ");
+
+                        
+		}
+     }
+     
+    
+
+    public static void main(String[] args)
+    {
+        Main m1 = new Main();
+        Main m2 = new Main();
+        Main m3 = new Main();
+
+        // Before setting name & priority
+        System.out.println("Before start:");
+        System.out.println(m1.getName() + " Priority: " + m1.getPriority() + " Alive: " + m1.isAlive());
+        System.out.println(m2.getName() + " Priority: " + m2.getPriority() + " Alive: " + m2.isAlive());
+        System.out.println(m3.getName() + " Priority: " + m3.getPriority() + " Alive: " + m3.isAlive());
+
+        // Assign user-defined name and priority
+        m1.setName("AAA");
+        m2.setName("BBB");
+        m3.setName("CCC");
+
+        m1.setPriority(1);
+        m2.setPriority(10);
+        m3.setPriority(6);
+
+        // Start threads
+      
+	m3.start();
+        m2.start();
+        
+
+        // After start
+        System.out.println("\nAfter start:");
+        System.out.println(m1.getName() + " Priority: " + m1.getPriority() + " Alive: " + m1.isAlive());
+		m1.start();
+
+        System.out.println(m2.getName() + " Priority: " + m2.getPriority() + " Alive: " + m2.isAlive());
+        System.out.println(m3.getName() + " Priority: " + m3.getPriority() + " Alive: " + m3.isAlive());
+    }
+}

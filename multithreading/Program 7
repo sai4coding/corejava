@@ -1,0 +1,50 @@
+class Main extends Thread
+{
+	private int start;
+	private int end;
+	private int increment;
+	
+	Main(int start,int end,int increment)
+	{
+		this.start=start;
+		this.end=end;
+		this.increment=increment;
+	}
+	public void run()
+	{
+		if(increment>=1)
+		{
+			for(int i=start;i<=end;i++)
+			{
+				System.out.println(Thread.currentThread().getName()+" "+i);
+			}
+		}
+		else
+		{
+			for(int i=start;i>=end;i--)
+			{
+				System.out.println(Thread.currentThread().getName()+" "+i);
+
+			}
+		}
+		
+	}
+	public static void main(String[] args) throws InterruptedException
+	{
+		Main m1=new Main(1,10,1);
+		Main m2=new Main(10,20,1);
+		Main m3=new Main(50,40,-1);
+		
+		m1.setName("Thread-1");
+		m2.setName("Thread-2");
+		m3.setName("Thread-3");
+
+		m1.start();
+		m1.join();
+		m2.start();
+		m2.join();
+		m3.start();
+		m3.join();
+		
+	}
+}
